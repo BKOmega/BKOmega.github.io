@@ -1,0 +1,56 @@
+# .github/workflows/dependabot-auto-merge.yml
+name: Dependabot Auto-Merge (patch)
+
+on:
+  pull_request:
+    types: [labeled, opened, synchronize, reopened, ready_for_review]
+  check_suite:
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  automerge:
+    if: github.actor == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request || (await github.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.check_suite?.pull_requests?.[0]?.number
+            })).data;
+
+            if (!pr) return;
+
+            // Require: at least one approval
+            const reviews = await github.pulls.listReviews({ owner: context.repo.owner, repo: context.repo.repo, pull_number: pr.number });
+            const approved = reviews.data.some(r => r.state === 'APPROVED');
+
+            // Require: all required checks green
+            const { data: combined } = await github.repos.getCombinedStatusForRef({
+              owner: context.repo.owner, repo: context.repo.repo, ref: pr.head.sha
+            });
+            const allGreen = combined.state === 'success';
+
+            // Only merge patch updates (Dependabot titles look like: "Bump foo from 1.2.3 to 1.2.4")
+            const isPatch = (() => {
+              const m = pr.title.match(/from (\d+)\.(\d+)\.(\d+) to (\d+)\.(\d+)\.(\d+)/);
+              return m ? (m[1] === m[4] && m[2] === m[5] && m[3] !== m[6]) : false;
+            })();
+
+            if (approved && allGreen && isPatch) {
+              await github.pulls.merge({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number,
+                merge_method: 'squash'
+              });
+              core.info(`Merged ${pr.html_url}`);
+            } else {
+              core.info(`Not merging. Approved=${approved} ChecksGreen=${allGreen} IsPatch=${isPatch}`);
+            }
