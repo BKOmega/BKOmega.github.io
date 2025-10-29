@@ -28,3 +28,6 @@ git push
 
 on GitHub: Open PR from dev → main, review, squash-merge.
 Pages auto-updates from main/docs.
+
+
+bundle exec jekyll serve --source docs
