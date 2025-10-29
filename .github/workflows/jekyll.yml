@@ -74,8 +74,10 @@ jobs:
             "_site/**/*.html"
   # Deployment job
   deploy:
-    runs-on: ubuntu-latest
+    # ⬇️ Only deploy on pushes to main, never from dev or PRs
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages  
     steps:
