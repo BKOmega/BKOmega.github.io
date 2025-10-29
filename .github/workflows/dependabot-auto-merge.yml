@@ -1,0 +1,67 @@
+# .github/workflows/dependabot-auto-merge.yml
+name: Dependabot Auto-Merge (patch)
+
+on:
+  pull_request:
+    types: [labeled, opened, synchronize, reopened, ready_for_review]
+  check_suite:
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  automerge:
+    # Only run for Dependabot PRs
+    if: github.actor == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            // Get the PR object (works for both pull_request and check_suite events)
+            const getPR = async () => {
+              if (context.payload.pull_request) return context.payload.pull_request;
+              const prs = context.payload.check_suite?.pull_requests;
+              if (prs && prs[0]) {
+                const { data } = await github.pulls.get({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: prs[0].number
+                });
+                return data;
+              }
+              return null;
+            };
+
+            const pr = await getPR();
+            if (!pr) { core.info("No PR found"); return; }
+
+            // Gate by label
+            const hasLabel = pr.labels.some(l => l.name === 'auto-merge');
+            if (!hasLabel) { core.info("PR missing 'auto-merge' label"); return; }
+
+            // Require at least one approval
+            const { data: reviews } = await github.pulls.listReviews({
+              owner: context.repo.owner, repo: context.repo.repo, pull_number: pr.number
+            });
+            const approved = reviews.some(r => r.state === 'APPROVED');
+
+            // Require all required checks green
+            const { data: combined } = await github.repos.getCombinedStatusForRef({
+              owner: context.repo.owner, repo: context.repo.repo, ref: pr.head.sha
+            });
+            const allGreen = combined.state === 'success';
+
+            if (approved && allGreen) {
+              await github.pulls.merge({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number,
+                merge_method: 'squash'
+              });
+              core.info(`Merged ${pr.html_url}`);
+            } else {
+              core.info(`Not merging. Approved=${approved} ChecksGreen=${allGreen}`);
+            }

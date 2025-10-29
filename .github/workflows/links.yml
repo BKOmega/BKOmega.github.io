@@ -1,0 +1,11 @@
+# .github/workflows/links.yml
+name: Link Checker
+on: [push, pull_request]
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v1
+        with:
+          args: --verbose --no-progress docs/**/*.md

@@ -4,9 +4,9 @@ name: Build and Deploy Jekyll (Custom Ruby)
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
-  #pull_request:
-   # branches: [ main ]
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main, dev ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -54,8 +54,13 @@ jobs:
         
   # Deployment job
   deploy:
-    runs-on: ubuntu-latest
+    # ⬇️ Only deploy on pushes to main, never from dev or PRs
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages  
     steps:
