@@ -1,7 +1,5 @@
 # Bits & Bytes – Home Lab (Starter)
 
-This is a commit-ready starter for your public home lab docs at **BKOmega.github.io** (served at https://www.bitsandbytes.co.uk).
-
 ## Branching workflow
 
 - Work in `dev`
