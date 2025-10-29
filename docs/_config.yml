@@ -10,6 +10,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-remote-theme
+  # - jekyll-scholar
+  # - jekyll-redirect-from
+  # - jekyll-archives
 
 just_the_docs:
   search_enabled: true
