@@ -37,8 +37,12 @@ on GitHub: Open PR from dev → main, review, squash-merge.
 Pages auto-updates from main/docs.
 
 
+<<<<<<< HEAD
 bundle exec jekyll serve --source docs
 
 on GitHub: Open PR from dev → main, review, squash-merge
 Pages auto-updates from main/docs
 
+=======
+bundle exec jekyll serve --source docs
+>>>>>>> 27da980 (Enable Jekyll serve command and add pull request trigger for GitHub Actions)
