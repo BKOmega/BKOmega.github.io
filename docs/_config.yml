@@ -7,7 +7,7 @@ baseurl: ""
 source: docs
 
 # Use the Just the Docs theme via remote_theme (works with GitHub Pages)
-remote_theme: just-the-docs/just-the-docs
+remote_theme: just-the-docs/just-the-docs@v0.10.1
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
