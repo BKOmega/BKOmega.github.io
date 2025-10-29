@@ -1,0 +1,30 @@
+- name: Traefik
+  fqdn: reverse.dmz.racelee.internal
+  role: reverse-proxy
+  network: DMZ
+  notes: Entry point from Internet; routers -> services via internal CNAMEs
+  tags: [traefik, dmz, reverse-proxy, docker]
+- name: Portainer
+  fqdn: portainer.services.racelee.internal
+  behind_proxy: true
+  network: Services
+  tags: [portainer, docker, traefik]
+- name: FreeIPA
+  fqdn: ipa01.mgmt.racelee.internal
+  peers: [ipa02.mgmt.racelee.internal]
+  network: Management
+  tags: [freeipa, kerberos, ldap, pki]
+- name: Technitium DNS
+  fqdn: ns01.services.racelee.internal
+  peers: [ns02.services.racelee.internal]
+  network: Services
+  tags: [dns, technitium]
+- name: Proxmox Cluster
+  fqdn: pve-prod1.pserver.racelee.internal
+  network: Physical servers
+  tags: [proxmox, virtualization]
+- name: TrueNAS
+  fqdn: truenas.storage.racelee.internal
+  services: [Plex, NFS, SMB]
+  network: Storage
+  tags: [truenas, storage, plex]

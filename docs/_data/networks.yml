@@ -1,0 +1,28 @@
+- name: DMZ
+  domain: dmz.racelee.internal
+  cidr: 192.168.4.0/24
+  notes: Internet-facing reverse proxy & edge bits (Traefik on Docker)
+- name: Management
+  domain: mgmt.racelee.internal
+  cidr: 10.11.0.0/24
+- name: Physical servers
+  domain: pserver.racelee.internal
+  cidr: 10.20.0.0/22
+- name: Virtual servers
+  domain: vserver.racelee.internal
+  cidr: 10.30.0.0/22
+- name: Storage
+  domain: storage.racelee.internal
+  cidr: 10.40.0.0/24
+- name: Services
+  domain: services.racelee.internal
+  cidr: 10.50.0.0/24
+- name: IoT
+  domain: iot.racelee.internal
+  cidr: 192.168.2.0/24
+- name: Guests
+  domain: guest.racelee.internal
+  cidr: 192.168.3.0/24
+- name: Security cameras
+  domain: ispy.racelee.internal
+  cidr: 192.168.X.0/24
