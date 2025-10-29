@@ -8,8 +8,10 @@ on:
     types: [completed]
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: write           # to merge
+  pull-requests: write      # to read reviews + merge
+  statuses: read            # to read commit status API (combined status)
+  checks: read              # (optional) read check runs, useful if you change logic later
 
 jobs:
   automerge:
