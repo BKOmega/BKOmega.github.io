@@ -11,7 +11,7 @@ remote_theme: just-the-docs/just-the-docs@v0.10.1
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-feed
+  #- jekyll-feed
   - jekyll-remote-theme
   # - jekyll-scholar
   # - jekyll-redirect-from
