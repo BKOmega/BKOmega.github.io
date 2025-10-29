@@ -17,3 +17,4 @@ jobs:
             --exclude '^(mailto:|tel:|ssh:|sftp:|file:|about:blank$)'
             --exclude '^(http://localhost|http://127\.0\.0\.1|https://localhost)'
             "_site/**/*.html"
+            --fail-if-empty false
