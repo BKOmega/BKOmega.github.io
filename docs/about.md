@@ -8,7 +8,7 @@ I keep personal data out and technical detail accurate so others can learn safel
 ## Anonymisation rules
 
 - No real hostnames, users, or public IPs
-- Use representative domains (e.g. `*.racelee.internal`)
+- Use representative domains (e.g. `*.domain.internal`)
 - Replace secrets with placeholders
 - Scrub screenshots; template configs
 

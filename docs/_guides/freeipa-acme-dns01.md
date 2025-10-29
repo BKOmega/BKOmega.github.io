@@ -33,7 +33,7 @@ services:
     image: traefik:latest
     environment:
       # lego/Traefik RFC2136 provider variables:
-      RFC2136_NAMESERVER: "ns01.services.racelee.internal:53"   # IP or host:port of Technitium
+      RFC2136_NAMESERVER: "ns01.services.domain.internal:53"   # IP or host:port of Technitium
       RFC2136_TSIG_ALGORITHM: "hmac-sha256"                     # match Technitium
       RFC2136_TSIG_KEY: "acme-tsig"                             # your TSIG key name
       RFC2136_TSIG_SECRET: "BASE64/SECRET=="                    # your TSIG secret

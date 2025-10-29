@@ -4,10 +4,10 @@ tags: [regex, grok, logging]
 nav_order: 10
 ---
 
-**Domain regex for** `homeassistant.home.racelee.co.uk` **or** `homassistant.racelee.co.uk`:
+**Domain regex for** `homeassistant.home.domain.co.uk` **or** `homassistant.domain.co.uk`:
 
 ```
-^(?:homeassistant\.home\.racelee\.co\.uk|homassistant\.racelee\.co\.uk)$
+^(?:homeassistant\.home\.domain\.co\.uk|homassistant\.domain\.co\.uk)$
 ```
 
 **Grok starter for Plex/NGINX-style logs** _(add fields as needed)_:

@@ -6,7 +6,7 @@ nav_order: 10
 ---
 
 ## Goal
-Front Traefik in `dmz.racelee.internal` and publish internal apps safely.
+Front Traefik in `dmz.domain.internal` and publish internal apps safely.
 
 ## Diagram
 _Add your diagram or ascii layout here_
@@ -17,7 +17,7 @@ _Add your diagram or ascii layout here_
 - ACME: DNS-01 provider configured (Technitium API or IPA hook)
 
 ## Steps
-1. **DNS** – Create public `A/AAAA` for proxy, internal `CNAME`s for apps pointing to `internalproxy.services.racelee.internal`.
+1. **DNS** – Create public `A/AAAA` for proxy, internal `CNAME`s for apps pointing to `internalproxy.services.domain.internal`.
 2. **Traefik** – Entrypoints :80/:443, routers with TLS + middlewares (headers, rate limit).
 3. **ACME** – DNS-01; avoid mixing `CNAME` with other records on the same name.
 4. **Firewall** – Allow :80→:443 for redirect, :443 inbound; egress to internal app ports only.
