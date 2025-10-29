@@ -12,7 +12,13 @@ git push -u origin dev
 git checkout dev
 git pull
 
-## ...edit files...
+### ...edit files...
+
+## test
+
+bundle exec jekyll serve --livereload
+
+## commit and push
 
 git add -A
 git commit -m "Post: homelab network design (draft)"
