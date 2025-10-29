@@ -1,0 +1,19 @@
+<p><strong>What changed</strong></p>
+<ul>
+  <li>Moved frontend to DMZ Traefik; backends via <code class="language-plaintext highlighter-rouge">*.services.domain.internal</code> CNAMEs.</li>
+</ul>
+
+<p><strong>Why</strong></p>
+<ul>
+  <li>Segmentation, simpler certificate management (DNS-01).</li>
+</ul>
+
+<p><strong>Outcome</strong></p>
+<ul>
+  <li>Clean TLS; rate limits added; OCSP stapling handled.</li>
+</ul>
+
+<p><strong>Next</strong></p>
+<ul>
+  <li>Document Technitium import strategy and CNAME pitfalls.</li>
+</ul>

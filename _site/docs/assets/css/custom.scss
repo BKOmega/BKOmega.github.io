@@ -1,0 +1,19 @@
+/* Simple callouts and copy button styling */
+
+blockquote {
+  border-left: 4px solid #e1e4e8;
+  padding-left: .8rem;
+}
+
+.bb-copy-button {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.45rem;
+  border: 1px solid #d0d7de;
+  border-radius: 4px;
+  background: #f6f8fa;
+  cursor: pointer;
+}
+
+.bb-copy-button:hover {
+  background: #eef1f4;
+}
