@@ -1,0 +1,29 @@
+version: 2
+updates:
+  # Keep Ruby gems (Bundler) updated
+  - package-ecosystem: "bundler"
+    # If your Gemfile is at the repo root use "/".
+    # If you kept it in docs/, change this to "/docs".
+    directory: "/"
+    schedule:
+      interval: "weekly"       # daily | weekly | monthly
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/London"
+    open-pull-requests-limit: 5
+    labels: ["deps", "ruby"]
+    # Optional: group minor/patch updates into one PR
+    groups:
+      gems-minor-patch:
+        applies-to: version-updates
+        update-types: ["minor", "patch"]
+
+  # Keep GitHub Actions versions updated too
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/London"
+    labels: ["deps", "ci"]
