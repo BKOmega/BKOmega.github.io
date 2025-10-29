@@ -12,15 +12,15 @@ nav_order: 25
 ## Proposed VLAN map (adjust IDs)
 | Segment | VLAN | CIDR | Domain |
 |---|---:|---|---|
-| Management | `<11>` | `10.11.0.0/24` | `mgmt.racelee.internal` |
-| Physical servers | `<20>` | `10.20.0.0/22` | `pserver.racelee.internal` |
-| Virtual servers | `<30>` | `10.30.0.0/22` | `vserver.racelee.internal` |
-| Storage | `<40>` | `10.40.0.0/24` | `storage.racelee.internal` |
-| Services | `<50>` | `10.50.0.0/24` | `services.racelee.internal` |
-| DMZ | `<4>` | `192.168.4.0/24` | `dmz.racelee.internal` |
-| IoT | `<102>` | `192.168.2.0/24` | `iot.racelee.internal` |
-| Guests | `<103>` | `192.168.3.0/24` | `guest.racelee.internal` |
-| Cameras | `<1xx>` | `192.168.x.0/24` | `ispy.racelee.internal` |
+| Management | `<11>` | `10.11.0.0/24` | `mgmt.domain.internal` |
+| Physical servers | `<20>` | `10.20.0.0/22` | `pserver.domain.internal` |
+| Virtual servers | `<30>` | `10.30.0.0/22` | `vserver.domain.internal` |
+| Storage | `<40>` | `10.40.0.0/24` | `storage.domain.internal` |
+| Services | `<50>` | `10.50.0.0/24` | `services.domain.internal` |
+| DMZ | `<4>` | `192.168.4.0/24` | `dmz.domain.internal` |
+| IoT | `<102>` | `192.168.2.0/24` | `iot.domain.internal` |
+| Guests | `<103>` | `192.168.3.0/24` | `guest.domain.internal` |
+| Cameras | `<1xx>` | `192.168.x.0/24` | `ispy.domain.internal` |
 
 > Choose IDs that fit your switch/UniFi scheme; update firewall rules accordingly.
 
