@@ -6,6 +6,7 @@ gem "jekyll-remote-theme", "~> 0.4.3"           # REQUIRED for remote_theme
 gem "jekyll-seo-tag"
 gem "jekyll-sitemap"
 # gem "jekyll-feed"
+
 # add any others you want:
 # gem "jekyll-scholar"
 # gem "jekyll-redirect-from"
