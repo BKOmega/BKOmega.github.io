@@ -20,9 +20,19 @@ plugins:
 just_the_docs:
   search_enabled: true
   nav_enabled: true
-  aux_links:
-    GitHub Repo: https://github.com/BKOmega/BKOmega.github.io
-  external_links_new_tab: true
+
+# Header (top-right) links
+aux_links:
+  "GitHub Repo":
+    - "https://github.com/BKOmega/BKOmega.github.io"
+aux_links_new_tab: true   # open header links in a new tab
+
+
+# (Optional) External links in the left nav (if you add any there)
+# nav_external_links:
+#   - title: "My External Thing"
+#     url: "https://example.com"
+nav_external_links_new_tab: true
 
 # Collections
 collections:
@@ -58,3 +68,5 @@ include:
   - _includes/head_custom.html
   - assets/js/copy.js
   - assets/css/custom.scss
+
+logo: /assets/img/social-card.png
