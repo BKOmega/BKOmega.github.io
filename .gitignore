@@ -5,4 +5,8 @@ _site/
 .jekyll-metadata
 .DS_Store
 Gemfile.lock
+<<<<<<< HEAD
 vendor/bundle/
+=======
+vendor/bundle/
+>>>>>>> b3159fb (Post: fix ignore file)
