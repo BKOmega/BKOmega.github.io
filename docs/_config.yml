@@ -3,6 +3,9 @@ description: Notes, designs, guides, and templates from my home lab journey.
 url: https://www.bitsandbytes.co.uk
 baseurl: ""
 
+# Tell Jekyll that your source folder is /docs
+source: docs
+
 # Use the Just the Docs theme via remote_theme (works with GitHub Pages)
 remote_theme: just-the-docs/just-the-docs
 plugins:
