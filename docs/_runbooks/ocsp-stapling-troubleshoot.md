@@ -13,6 +13,6 @@ Traefik log shows `no OCSP stapling ... Post "http://ipa-ca...": lookup failed`.
 - If stapling not required, explicitly disable stapling in Traefik (document risk).
 
 **Fix**
-1) DNS: add `ipa-ca` record → IPA CA host.  
+1) DNS: add `ipa-ca.` record → IPA CA host.  
 2) Firewall: allow Traefik → IPA CA :80 (or configured port).  
 3) Reload Traefik; verify `openssl s_client -status -connect host:443`.
