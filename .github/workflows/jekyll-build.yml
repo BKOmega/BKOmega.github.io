@@ -50,7 +50,7 @@ jobs:
 
       - name: Link Checker (Lychee)
         if: ${{ steps.linkcount.outputs.count != '0' }}
-        uses: lycheeverse/lychee-action@v1
+        uses: lycheeverse/lychee-action@v2
         with:
           # Check only the generated HTML. Add flags to reduce false positives.
           args: >
