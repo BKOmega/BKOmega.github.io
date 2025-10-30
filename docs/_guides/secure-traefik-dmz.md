@@ -3,6 +3,7 @@ title: Secure Traefik in a DMZ with Internal Services
 summary: DMZ Traefik on Docker; internal routing via CNAMEs; ACME DNS-01; firewall rules (UniFi).
 tags: [traefik, dmz, docker, acme, unifi]
 nav_order: 10
+parent: Guides Index
 ---
 
 ## Goal

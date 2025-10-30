@@ -2,6 +2,7 @@
 title: Handy Regex & Grok Patterns
 tags: [regex, grok, logging]
 nav_order: 10
+parent: Notes Index
 ---
 
 **Domain regex for** `homeassistant.home.domain.co.uk` **or** `homassistant.domain.co.uk`:
