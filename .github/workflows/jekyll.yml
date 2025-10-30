@@ -44,7 +44,28 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
-        
+      # Link checking job
+      - name: Count links in built site
+        id: linkcount
+        run: |
+          # count href/src occurrences; don't fail the job if grep finds nothing
+          count=$(grep -RhoE 'href="[^"]+"|src="[^"]+"' _site || true | wc -l)
+          echo "count=$count"
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+
+      - name: Link Checker (Lychee)
+        if: ${{ steps.linkcount.outputs.count != '0' }}
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Check only the generated HTML. Add flags to reduce false positives.
+          args: >
+            --no-progress --verbose
+            --accept 200,201,204,301,302,303,307,308
+            --timeout 20
+            --max-concurrency 4
+            --exclude '^(mailto:|tel:|ssh:|sftp:|file:|about:blank$)'
+            --exclude '^(http://localhost|http://127\.0\.0\.1|https://localhost)'
+            "_site/**/*.html"
   # Deployment job
   deploy:
     runs-on: ubuntu-latest
