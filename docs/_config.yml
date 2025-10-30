@@ -20,6 +20,22 @@ plugins:
 just_the_docs:
   search_enabled: true
   nav_enabled: true
+  collections:
+    guides:
+      name: Guides
+      nav_fold: true
+    designs:
+      name: Designs
+      nav_fold: true
+    runbooks:
+      name: Runbooks
+      nav_fold: true
+    templates:
+      name: Templates
+      nav_fold: true
+    notes:
+      name: Notes
+      nav_fold: true
 
 # Header (top-right) links
 aux_links:
