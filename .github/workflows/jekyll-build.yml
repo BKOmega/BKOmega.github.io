@@ -50,7 +50,7 @@ jobs:
 
       - name: Link Checker (Lychee)
         if: ${{ steps.linkcount.outputs.count != '0' }}
-        uses: lycheeverse/lychee-action@v1
+        uses: lycheeverse/lychee-action@v2
         with:
           # Check only the generated HTML. Add flags to reduce false positives.
           args: >
@@ -58,7 +58,6 @@ jobs:
             --accept 200,201,204,301,302,303,307,308
             --timeout 20
             --max-concurrency 4
-            --exclude-mail
             --exclude '^(mailto:|tel:|ssh:|sftp:|file:|about:blank$)'
             --exclude '^(http://localhost|http://127\.0\.0\.1|https://localhost)'
             "_site/**/*.html"
