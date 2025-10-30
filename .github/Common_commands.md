@@ -12,6 +12,7 @@ git push -u origin dev
 git checkout dev
 git pull
 
+<<<<<<< HEAD
 ### ...edit files...
 
 ## test
@@ -19,6 +20,9 @@ git pull
 bundle exec jekyll serve --livereload
 
 ## commit and push
+=======
+## ...edit files...
+>>>>>>> 9b05b46 (tweaks)
 
 git add -A
 git commit -m "Post: homelab network design (draft)"
@@ -28,6 +32,9 @@ git push
 
 on GitHub: Open PR from dev → main, review, squash-merge.
 Pages auto-updates from main/docs.
+<<<<<<< HEAD
 
 
 bundle exec jekyll serve --source docs
+=======
+>>>>>>> 9b05b46 (tweaks)
