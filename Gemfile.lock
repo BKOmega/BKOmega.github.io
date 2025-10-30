@@ -89,6 +89,11 @@ DEPENDENCIES
   jekyll (~> 4.3)
   jekyll-include-cache
   jekyll-remote-theme (~> 0.4.3)
+  jekyll-feed
+  jekyll-include-cache
+  jekyll-feed
+  jekyll-include-cache
+  jekyll-remote-theme (~> 0.4.3)
   jekyll-seo-tag
   jekyll-sitemap
   jekyll-watch
