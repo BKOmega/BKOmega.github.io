@@ -79,10 +79,15 @@ GEM
       webrick (~> 1.7)
     jekyll-include-cache (0.2.1)
       jekyll (>= 3.7, < 5.0)
+<<<<<<< HEAD
     jekyll-remote-theme (0.4.1)
       addressable (~> 2.0)
       jekyll (>= 3.5, < 5.0)
       rubyzip (>= 1.3.0)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 6c4f438 (Remove conflict markers from Gemfile.lock)
     jekyll-remote-theme (0.4.3)
       addressable (~> 2.0)
       jekyll (>= 3.5, < 5.0)
