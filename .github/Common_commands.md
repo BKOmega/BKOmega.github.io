@@ -20,6 +20,11 @@ bundle exec jekyll serve --livereload
 
 ## commit and push
 
+git checkout dev || git checkout -b dev  # switch to dev, create if missing
+git pull
+
+### ...edit files
+
 git add -A
 git commit -m "Post: homelab network design (draft)"
 git push
@@ -29,5 +34,9 @@ git push
 on GitHub: Open PR from dev → main, review, squash-merge.
 Pages auto-updates from main/docs.
 
-
 bundle exec jekyll serve --source docs
+
+on GitHub: Open PR from dev → main, review, squash-merge
+Pages auto-updates from main/docs
+
+

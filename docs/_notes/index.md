@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Notes
-permalink: /notes/
+permalink: /notes/index.html
 nav_order: 1
 has_children: true
 ---

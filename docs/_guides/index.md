@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Guides
-permalink: /guides/
+permalink: /guides/index.html   # ← force exact path, bullet-proof
 nav_order: 1
 has_children: true
 ---
