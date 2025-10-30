@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Runbook Index
+title: Runbook
+permalink: /runbook/
 nav_order: 1
 has_children: true
 ---
