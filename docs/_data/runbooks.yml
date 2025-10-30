@@ -1,0 +1,7 @@
+# Use this file to keep owners/escalation and common links DRY
+owners:
+  network: "Network lead"
+  platform: "Alex"
+links:
+  traefik_dashboard: "<url>"
+  portainer: "<url>"

@@ -5,6 +5,7 @@ nav_order: 10
 parent: Templates
 ---
 
+{% raw %}
 ```yaml
 services:
   portainer:
@@ -16,3 +17,4 @@ services:
       - traefik.http.routers.portainer.tls.certresolver=letsencrypt
       - traefik.http.routers.portainer.middlewares=secure,ratelimit
 ```
+{% endraw %}

@@ -1,0 +1,1 @@
+> **Tip:** keep commands copy‑pastable and guarded with `set -euo pipefail` if you compose scripts.
