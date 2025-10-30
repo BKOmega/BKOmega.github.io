@@ -6,15 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: lycheeverse/lychee-action@v2.0.2
+      - uses: lycheeverse/lychee-action@v1
         with:
-          args: >
-            --no-progress --verbose
-            --accept 200,201,204,301,302,303,307,308
-            --timeout 20
-            --max-concurrency 4
-            --exclude-mail
-            --exclude '^(mailto:|tel:|ssh:|sftp:|file:|about:blank$)'
-            --exclude '^(http://localhost|http://127\.0\.0\.1|https://localhost)'
-            "_site/**/*.html"
-            --fail-if-empty false
+          args: --verbose --no-progress docs/**/*.md
