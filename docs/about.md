@@ -2,7 +2,7 @@
 title: About
 nav_order: 99
 ---
-
+![caricature image of Alex](/assets/img/social-card.png)
 I keep personal data out and technical detail accurate so others can learn safely.
 
 ## Anonymisation rules

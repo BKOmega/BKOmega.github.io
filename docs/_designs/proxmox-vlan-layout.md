@@ -2,6 +2,7 @@
 title: Proxmox VLAN Layout & Bridging (with UniFi trunk)
 tags: [proxmox, vlan, networking, unifi, design]
 nav_order: 25
+parent: Design Index
 ---
 
 ## Goals

@@ -3,6 +3,7 @@ title: ACME DNS-01 via RFC2136 (Technitium or FreeIPA) with Traefik
 summary: Automate Let's Encrypt (and private ACME) certs using Traefik + DNS-01; updates DNS with RFC2136 to Technitium or FreeIPA.
 tags: [acme, dns, rfc2136, traefik, technitium, freeipa, tls]
 nav_order: 15
+parent: Guides Index
 ---
 
 ## Goal

@@ -2,6 +2,7 @@
 title: Portainer behind Traefik (Docker Compose)
 tags: [portainer, docker, traefik, template]
 nav_order: 10
+parent: Templates Index
 ---
 
 ```yaml
