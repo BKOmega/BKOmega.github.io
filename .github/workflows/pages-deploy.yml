@@ -25,7 +25,6 @@ jobs:
   deploy:
     # ⬇️ Only deploy on pushes to main, never from dev or PRs
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: build
     runs-on: ubuntu-latest
     permissions:
       pages: write
