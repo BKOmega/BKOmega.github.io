@@ -1,0 +1,4 @@
+[submodule "docs/templates"]
+	path = docs/templates
+	url = https://github.com/BKOmega/homelab-templates
+	branch = main
