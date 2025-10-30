@@ -3,10 +3,14 @@ source "https://rubygems.org"
 gem "jekyll", "~> 4.3"
 gem "webrick", group: :jekyll_plugins # needed for local serve on Ruby 3+
 <<<<<<< HEAD
+<<<<<<< HEAD
 gem "jekyll-remote-theme", "~> 0.4.3"           # REQUIRED for remote_theme
 =======
 gem "jekyll-remote-theme"            # REQUIRED for remote_theme
 >>>>>>> 0648cf5 (Add jekyll-remote-theme and lockfile)
+=======
+gem "jekyll-remote-theme", "~> 0.4.3"           # REQUIRED for remote_theme
+>>>>>>> dfb866e (Bump jekyll-remote-theme to 0.4.3)
 gem "jekyll-seo-tag"
 gem "jekyll-sitemap"
 # gem "jekyll-feed"
