@@ -2,7 +2,7 @@
 title: OCSP Stapling Troubleshooting with Private CA (FreeIPA)
 tags: [tls, ocsp, freeipa, traefik]
 nav_order: 10
-parent: Runbook
+parent: Runbooks
 ---
 
 **Symptoms**  
