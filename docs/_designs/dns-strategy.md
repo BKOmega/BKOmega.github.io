@@ -2,7 +2,7 @@
 title: DNS Strategy (Technitium + Internal Domains)
 tags: [dns, technitium, design]
 nav_order: 20
-parent: Design Index
+parent: Design
 ---
 
 - One primary **zone per parent domain** is simplest (`domain.internal`), with subdomains as **delegations** only if needed.

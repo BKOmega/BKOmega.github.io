@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Design Index
+title: Design
+permalink: /designs/
 nav_order: 1
 has_children: true
 ---
