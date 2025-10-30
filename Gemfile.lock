@@ -80,6 +80,7 @@ GEM
     jekyll-include-cache (0.2.1)
       jekyll (>= 3.7, < 5.0)
 <<<<<<< HEAD
+<<<<<<< HEAD
     jekyll-remote-theme (0.4.1)
       addressable (~> 2.0)
       jekyll (>= 3.5, < 5.0)
@@ -100,15 +101,14 @@ GEM
     jekyll-include-cache (0.2.1)
       jekyll (>= 3.7, < 5.0)
     jekyll-remote-theme (0.4.3)
+=======
+    jekyll-remote-theme (0.4.1)
+>>>>>>> a7ce05e (Fix lockfile)
       addressable (~> 2.0)
       jekyll (>= 3.5, < 5.0)
 <<<<<<< HEAD
 =======
       rubyzip (>= 1.3.0)
-    jekyll-sass-converter (3.1.0)
-      sass-embedded (~> 1.75)
->>>>>>> 0648cf5 (Add jekyll-remote-theme and lockfile)
-=======
     jekyll-remote-theme (0.4.3)
       addressable (~> 2.0)
       jekyll (>= 3.5, < 5.0)
@@ -118,9 +118,14 @@ GEM
     jekyll-sass-converter (3.0.0)
       sass-embedded (~> 1.54)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> dfb866e (Bump jekyll-remote-theme to 0.4.3)
 >>>>>>> 01c0ec6 (Bump jekyll-remote-theme to 0.4.3)
+=======
+    jekyll-sass-converter (3.1.0)
+      sass-embedded (~> 1.75)
+>>>>>>> a7ce05e (Fix lockfile)
     jekyll-seo-tag (2.8.0)
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
@@ -147,6 +152,7 @@ GEM
     rexml (3.4.4)
     rouge (4.6.1)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -165,6 +171,10 @@ GEM
     rubyzip (2.4.1)
 >>>>>>> dfb866e (Bump jekyll-remote-theme to 0.4.3)
 >>>>>>> 01c0ec6 (Bump jekyll-remote-theme to 0.4.3)
+=======
+    rubyzip (2.4.1)
+    rubyzip (3.2.1)
+>>>>>>> a7ce05e (Fix lockfile)
     safe_yaml (1.0.5)
     sass-embedded (1.93.2)
       google-protobuf (~> 4.31)
@@ -231,6 +241,7 @@ DEPENDENCIES
   jekyll (~> 4.3)
   jekyll-include-cache
 <<<<<<< HEAD
+<<<<<<< HEAD
   jekyll-remote-theme (~> 0.4.3)
   jekyll-feed
   jekyll-include-cache
@@ -248,6 +259,9 @@ DEPENDENCIES
   jekyll-remote-theme (~> 0.4.3)
 >>>>>>> dfb866e (Bump jekyll-remote-theme to 0.4.3)
 >>>>>>> 01c0ec6 (Bump jekyll-remote-theme to 0.4.3)
+=======
+  jekyll-remote-theme (~> 0.4.3)
+>>>>>>> a7ce05e (Fix lockfile)
   jekyll-seo-tag
   jekyll-sitemap
   jekyll-watch
