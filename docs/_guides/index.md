@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Guides Index
+title: Guides
 nav_order: 1
 has_children: true
 ---

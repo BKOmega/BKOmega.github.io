@@ -3,7 +3,7 @@ title: Technitium DNS – Import Strategies & CNAME Pitfalls
 summary: Safe ways to bulk‑import records and avoid CNAME conflicts (and apex issues). Includes ACME alias tips.
 tags: [technitium, dns, cname, import, acme]
 nav_order: 12
-parent: Guides Index
+parent: Guides
 ---
 
 ## TL;DR
