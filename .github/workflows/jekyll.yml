@@ -29,6 +29,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive   # <— important
 
       # Full control over Ruby / Bundler / Gemfile
       - name: Set up Ruby
@@ -37,6 +40,9 @@ jobs:
           ruby-version: '3.3'
           bundler-cache: true   # installs and caches gems based on Gemfile.lock
 
+      - name: Install deps
+        run: bundle install --path vendor/bundle
+      
       # Build your site with YOUR Gemfile (custom plugins allowed)
       - name: Build site
         run: |
