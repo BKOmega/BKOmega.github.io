@@ -11,20 +11,11 @@ remote_theme: just-the-docs/just-the-docs@v0.10.1
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-feed
+  #- jekyll-feed
   - jekyll-remote-theme
   # - jekyll-scholar
   # - jekyll-redirect-from
   # - jekyll-archives
-
-# Optional: include your collections in the feed
-feed:
-  posts_limit: 20
-  collections:
-    - guides
-    - designs
-    - runbooks
-    - notes
 
 just_the_docs:
   search_enabled: true
@@ -76,6 +67,19 @@ collections:
   notes:
     output: true
     permalink: /notes/:path/
+  posts:
+    output: true  
+    permalink: /posts/:path/  
+
+# Optional: include your collections in the feed
+#feed:
+ # posts_limit: 20
+ # collections:
+ #   - guides
+ #   - designs
+ #   - runbooks
+ #   - notes
+ #   - posts
 
 # Defaults
 defaults:
